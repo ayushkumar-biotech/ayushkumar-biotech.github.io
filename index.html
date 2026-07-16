@@ -235,10 +235,12 @@ I've also completed Clinical Trial Analysis & Reporting (Internshala), where I w
     border-radius: 4px; font-size: var(--fs-xs); color: var(--muted);
     border: 1px solid var(--border);
   }
-<div class="skill-category">
-  <span class="skill-icon">📊</span>
-  <h3>Clinical & Biostatistics</h3>
-  <ul>
+<div class="skill-card reveal">
+  <div class="skill-card-header">
+    <div class="skill-icon">📊</div>
+    <h3>Clinical & Biostatistics</h3>
+  </div>
+  <ul class="skill-list">
     <li>SAS Programming</li>
     <li>Clinical Trial Reporting</li>
     <li>Clinical Data Analysis</li>
@@ -247,77 +249,91 @@ I've also completed Clinical Trial Analysis & Reporting (Internshala), where I w
   </ul>
 </div>
   /* ===== PROJECTS ===== */
-  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
-  .project-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 2rem;
-    display: flex; flex-direction: column; gap: 1rem;
-    transition: var(--transition); position: relative; overflow: hidden;
-  }
-  .project-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    background: linear-gradient(90deg, var(--teal), var(--gold));
-    opacity: 0; transition: opacity var(--transition);
-  }
-  .project-card:hover { border-color: var(--teal); transform: translateY(-4px); }
-  .project-card:hover::before { opacity: 1; }
-  .project-number { font-size: var(--fs-xs); color: var(--gold); font-weight: 700; letter-spacing: 2px; }
-  .project-card h3 { color: var(--white); font-size: var(--fs-lg); font-weight: 600; }
-  .project-card p { color: var(--muted); font-size: var(--fs-sm); line-height: 1.7; flex: 1; }
-  .project-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-  .stack-tag {
-    padding: 0.2rem 0.6rem; border-radius: 4px;
-    background: rgba(13,115,119,0.15); border: 1px solid rgba(13,115,119,0.3);
-    font-size: var(--fs-xs); color: var(--teal); font-weight: 500;
-  }
-  .project-links { display: flex; gap: 0.75rem; }
-  .project-links a {
-    font-size: var(--fs-xs); color: var(--muted); font-weight: 600;
-    letter-spacing: 0.5px; text-transform: uppercase;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 2px;
-    transition: color var(--transition), border-color var(--transition);
-  }
-  .project-links a:hover { color: var(--gold); border-color: var(--gold); }
-<div class="project-card">
-  <span class="project-number">03</span>
-  <h3>Clinical Demographics Summary Table (SAS)</h3>
-  <p>Built a Table 1.1 clinical demographics summary from a raw Excel trial 
-  dataset using SAS Studio. Imported data via PROC IMPORT, derived patient 
-  age, applied custom formats, and computed summary statistics with 
-  PROC MEANS and PROC FREQ using a macro-driven approach. Generated a 
-  formatted RTF report for regulatory-style clinical documentation.</p>
-  <div class="tags">
-    <span>SAS</span>
-    <span>Clinical Data Analysis</span>
-    <span>Biostatistics</span>
-    <span>RTF Reporting</span>
+  <div class="projects-grid">
+  <div class="project-card reveal">
+    <div class="project-number">01</div>
+    <h3>Genetic Engineering Capstone Project</h3>
+    <p>
+      Designed and executed a comprehensive research project on gene modification
+      techniques and CRISPR-Cas9 applications in healthcare and pharmaceutical
+      biotechnology. Conducted in-depth literature review and applied experimental
+      design principles. Documented findings using structured scientific methodology.
+    </p>
+    <div class="project-stack">
+      <span class="stack-tag">Genetic Engineering</span>
+      <span class="stack-tag">Scientific Research</span>
+      <span class="stack-tag">Data Analysis</span>
+      <span class="stack-tag">CRISPR</span>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/ayushkumar-biotech/genetic-engineering-capstone" target="_blank">GitHub →</a>
+    </div>
   </div>
-  <a href="https://github.com/ayushkumar-biotech/clinical-trial-analysis-sas">GitHub →</a>
+
+  <div class="project-card reveal">
+    <div class="project-number">02</div>
+    <h3>Python with AI Mini Projects</h3>
+    <p>
+      Built a collection of beginner-level AI and data analytics programs during
+      the Internshala Python with AI certification. Implemented Python scripts for
+      data collection, manipulation, and visualisation. Applied AI concepts to
+      solve classification and pattern-recognition problems.
+    </p>
+    <div class="project-stack">
+      <span class="stack-tag">Python</span>
+      <span class="stack-tag">Artificial Intelligence</span>
+      <span class="stack-tag">Data Analytics</span>
+      <span class="stack-tag">Programming</span>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/ayushkumar-biotech/python-ai-projects" target="_blank">GitHub →</a>
+    </div>
+  </div>
+
+  <div class="project-card reveal">
+    <div class="project-number">03</div>
+    <h3>Clinical Demographics Summary Table (SAS)</h3>
+    <p>
+      Built a Table 1.1 clinical demographics summary from a raw Excel trial
+      dataset using SAS Studio. Imported data via PROC IMPORT, derived patient
+      age, applied custom formats, and computed summary statistics with
+      PROC MEANS and PROC FREQ using a macro-driven approach. Generated a
+      formatted RTF report for regulatory-style clinical documentation.
+    </p>
+    <div class="project-stack">
+      <span class="stack-tag">SAS</span>
+      <span class="stack-tag">Clinical Data Analysis</span>
+      <span class="stack-tag">Biostatistics</span>
+      <span class="stack-tag">RTF Reporting</span>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/ayushkumar-biotech/clinical-trial-analysis-sas" target="_blank">GitHub →</a>
+    </div>
+  </div>
 </div>
   /* ===== CERTIFICATIONS ===== */
-  #certifications { background: var(--navy2); }
-  .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
-  .cert-card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: var(--radius); padding: 1.5rem;
-    display: flex; gap: 1rem; align-items: center;
-    transition: var(--transition);
-  }
-  .cert-card:hover { border-color: var(--gold); transform: translateY(-3px); }
-  .cert-badge {
-    width: 48px; height: 48px; flex-shrink: 0;
-    border-radius: 10px; display: flex; align-items: center; justify-content: center;
-    font-size: 1.4rem;
-    background: linear-gradient(135deg, rgba(201,168,76,0.2), rgba(13,115,119,0.2));
-    border: 1px solid rgba(201,168,76,0.2);
-  }
-  .cert-info h4 { color: var(--white); font-size: var(--fs-sm); margin-bottom: 0.2rem; }
-  .cert-info span { color: var(--muted); font-size: var(--fs-xs); }
-<div class="cert-card">
-  <span class="cert-icon">📊</span>
-  <h4>Clinical Trial Analysis & Reporting</h4>
-  <p>Internshala Trainings · 2026</p>
+ <div class="cert-grid">
+  <div class="cert-card reveal">
+    <div class="cert-badge">🐍</div>
+    <div class="cert-info">
+      <h4>Programming in Python with AI</h4>
+      <span>Internshala Trainings · 2026</span>
+    </div>
+  </div>
+  <div class="cert-card reveal">
+    <div class="cert-badge">🧬</div>
+    <div class="cert-info">
+      <h4>Genetic Engineering</h4>
+      <span>Skill Ladders · 2025</span>
+    </div>
+  </div>
+  <div class="cert-card reveal">
+    <div class="cert-badge">📊</div>
+    <div class="cert-info">
+      <h4>Clinical Trial Analysis & Reporting</h4>
+      <span>Internshala Trainings · 2026</span>
+    </div>
+  </div>
 </div>
   /* ===== ACHIEVEMENTS ===== */
   .achieve-list { display: flex; flex-direction: column; gap: 1rem; }
